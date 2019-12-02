@@ -1,0 +1,14 @@
+{
+  "name": "desing-home",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "watch": "webpack --watch"
+  },
+  "author": "Shevchenko Eugene",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
