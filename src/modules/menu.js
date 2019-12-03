@@ -3,8 +3,10 @@ const menu = () =>{
     menuDialog = document.querySelector('.popup-dialog-menu'),
     closeMenu = menuDialog.querySelector('.close-menu'),
     menuNav = menuDialog.querySelector('.popup-menu-nav'),
-    menuItems = menuDialog.querySelectorAll('.popup-menu-nav__item');
-   
+    menuItems = menuDialog.querySelectorAll('.popup-menu-nav__item'),
+    btnFooter = document.querySelector('.button-footer');
+    let intervalScroll;
+
     btnMenu.addEventListener('click', () => {
                 menuDialog.style.transform = 'translate3d(0,0,0)';
     });
@@ -26,8 +28,8 @@ const menu = () =>{
                 const elem = document.querySelector(anchor);
                 
                 
-                let intervalScroll,
-                 scrollVert = 0,
+                
+                 let scrollVert = 0,
                 placeScroll = elem.getBoundingClientRect().top;
                
                 const scrolling = () => {
@@ -44,7 +46,25 @@ const menu = () =>{
                 };
                 scrolling();
             }
-        })
+        });
+
+    });
+    btnFooter.addEventListener('click', event => {
+        event.preventDefault();
+        let count = window.scrollY;
+        
+        const toBegin = () =>{
+            intervalScroll = requestAnimationFrame(toBegin);
+            if (count > 0){
+                window.scrollTo(0, count);
+                count -= 200;
+            } else {
+                cancelAnimationFrame(intervalScroll);
+            }
+        }
+
+        toBegin();
+        
     });
 }
 

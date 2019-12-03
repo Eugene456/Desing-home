@@ -5,8 +5,9 @@ const telNumber = () => {
     phone = document.querySelector('.header-contacts__phone-number-accord'),
     phoneLink = phone.querySelector('a');
 
-    arrow.addEventListener('click', () =>{
-        if (phone.style.top === '0px'){
+    arrow.addEventListener('click', () => {
+        
+        if (phone.style.top === '0px' || !phone.hasAttribute('style')){
             phone.style.top = '27px';
             phoneLink.style.opacity = 1;
         } else{
