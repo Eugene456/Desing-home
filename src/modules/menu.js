@@ -51,6 +51,7 @@ const menu = () =>{
     });
     btnFooter.addEventListener('click', event => {
         event.preventDefault();
+        menuDialog.removeAttribute('style');
         let count = window.scrollY;
         
         const toBegin = () =>{
