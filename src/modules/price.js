@@ -5,7 +5,6 @@ const price = () => {
     listRepair = repairTabsType.querySelector('.link-list-repair'),
     btnClose = modalPrice.querySelector('.close');    
 
-        console.log(listRepair);
     listMenu.addEventListener('click', () => {
         modalPrice.style.visibility = 'initial';
     });
