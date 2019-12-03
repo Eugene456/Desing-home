@@ -29,7 +29,7 @@ const menu = () =>{
                 let intervalScroll,
                  scrollVert = 0,
                 placeScroll = elem.getBoundingClientRect().top;
-                console.log(placeScroll);
+               
                 const scrolling = () => {
                     intervalScroll = requestAnimationFrame(scrolling);
                                     
