@@ -1,4 +1,4 @@
-const formulaBlock = () =>{
+const formulaBlock = () => {
     const formula = document.getElementById('formula'),
     wrapperSmall = formula.querySelector('.wrapper_small'),
     formulaItem = document.querySelectorAll('.formula-item'),
@@ -50,7 +50,8 @@ const formulaBlock = () =>{
                      formulaPopup[i].style.bottom = '90px'; 
                 }
 
-        });
+        }
+    });
     });
    
 

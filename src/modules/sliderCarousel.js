@@ -162,4 +162,14 @@ const slider = new SliderCarousel(
 
 slider.init();
 
+const sliderPartner = new SliderCarousel(
+    '.wrapper',
+    '.partners-slider',
+    '#partners-arrow_right',
+    '#partners-arrow_left'
+
+);
+
+sliderPartner.init();
+
 export default SliderCarousel;
