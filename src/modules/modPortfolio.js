@@ -2,6 +2,7 @@ const modPortfolio = () =>{
     const portfolioSlider = document.querySelector('.portfolio-slider'),
 slides = portfolioSlider.querySelectorAll('.portfolio-slider__slide-frame'),
 modPortfolio = document.querySelector('.popup-portfolio'),
+btnClose = modPortfolio.querySelector('.close'),
 modalImg = modPortfolio.querySelectorAll('.popup-portfolio-slider__slide'),
 modalText = modPortfolio.querySelectorAll('.popup-portfolio-text'),
 arrowRight = document.getElementById('popup_portfolio_right'),
@@ -67,6 +68,10 @@ arrowLeft.addEventListener('click', () => {
 		arrowLeft.style.display = 'none';
 	}
 });
+
+btnClose.addEventListener('click', () => {
+    modPortfolio.style.visibility = 'hidden'; 
+})
 
 };
 
