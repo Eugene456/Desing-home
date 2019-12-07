@@ -17,6 +17,7 @@ import documents from "./modules/documents";
 import disengAdd from "./modules/desing";
 import desingAdd from "./modules/desing";
 import modPortfolio from "./modules/modPortfolio";
+import problem from "./modules/problem";
 
 telNumber();
 menu();
@@ -30,3 +31,4 @@ tabs();
 documents();
 desingAdd();
 modPortfolio();
+problem();

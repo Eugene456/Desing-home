@@ -1,12 +1,12 @@
 
 class SliderCarousel {
-    constructor(main, wrap, next, prev){
+    constructor(main, wrap, next, prev, slideToShow = 3){
         this.main = document.querySelector(main),
         this.wrap = document.querySelector(wrap),
         this.slides = document.querySelector(wrap).children,
         this.next = document.querySelector(next),
         this.prev = document.querySelector(prev), 
-        this.slideToShow = 3,
+        this.slideToShow = slideToShow,
         this.options = {
             position: 0,
             infinity: true,
@@ -69,7 +69,7 @@ class SliderCarousel {
             }
             .glo-slider__item{
                 flex: 0 0 ${this.options.widthSlide}% !important;
-                margin: auto 0 !important;
+                margin: auto 0;
             }
         `;
         document.head.appendChild(style);
@@ -163,10 +163,10 @@ const slider = new SliderCarousel(
 slider.init();
 
 const sliderProblems = new SliderCarousel(
-    '.wrapper',
-    '.partners-slider',
-    '#partners-arrow_right',
-    '#partners-arrow_left'
+    '.problems-slider-wrap',
+    '.problems-slider',
+    '#problems-arrow_right',
+    '#problems-arrow_left'
 
 );
 
