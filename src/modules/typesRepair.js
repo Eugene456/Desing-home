@@ -107,7 +107,7 @@ const activePrevSlide = ()=>{
             if (step === 1){
                 arrowLeft.style.display = 'none';
             }
-            console.log(activeBlock[0]);
+            
             step--;
             activeBlock[0].children[step].style.display = 'flex';
             sliderCurrent.textContent = step + 1;
