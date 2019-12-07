@@ -173,18 +173,21 @@ const sliderProblems = new SliderCarousel(
 sliderProblems.init();
 
 
-/*
-const partnersCont = document.querySelector('.partners-slider'),
-partnerItems = document.querySelectorAll('.partners-slider__slide');
+const carusProblems = new SliderCarousel(
+    '.problems-slider-wrap',
+    '.problems-slider',
+    '#problems-arrow_right',
+    '#problems-arrow_left'
 
-partnersCont.style.display = 'flex';
-partnersCont.style.justifyContent = 'space-between';
+);
 
+carusProblems.init();
 
-partnerItems.forEach(item => {
-    item.style.flexBasis = '50%';
-    //item.style.overflow = 'hidden';
-}) 
-*/
-
-export default SliderCarousel;
+const partners = new SliderCarousel(
+    '.wrapper',
+    '.partners-slider',
+    '#partners-arrow_right',
+    '#partners-arrow_left'
+     
+)
+partners.init();
