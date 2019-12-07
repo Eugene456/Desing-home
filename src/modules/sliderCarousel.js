@@ -162,7 +162,7 @@ const slider = new SliderCarousel(
 
 slider.init();
 
-const sliderPartner = new SliderCarousel(
+const sliderProblems = new SliderCarousel(
     '.wrapper',
     '.partners-slider',
     '#partners-arrow_right',
@@ -170,6 +170,21 @@ const sliderPartner = new SliderCarousel(
 
 );
 
-sliderPartner.init();
+sliderProblems.init();
+
+
+/*
+const partnersCont = document.querySelector('.partners-slider'),
+partnerItems = document.querySelectorAll('.partners-slider__slide');
+
+partnersCont.style.display = 'flex';
+partnersCont.style.justifyContent = 'space-between';
+
+
+partnerItems.forEach(item => {
+    item.style.flexBasis = '50%';
+    //item.style.overflow = 'hidden';
+}) 
+*/
 
 export default SliderCarousel;

@@ -37,7 +37,7 @@ const formulaBlock = () => {
         target = target.closest('.formula-slider__slide');
         formulaSliderSlides.forEach((item,i) =>{
             let textItem = item.querySelector('p');
-            formulaPopup[i].removeAttribute('style'); 
+            item[i].removeAttribute('style'); 
             textItem.removeAttribute('style'); 
 
             if(item === target){
