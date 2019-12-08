@@ -1,5 +1,6 @@
 'use strict';
 
+import takedata from "./modules/takedata";
 import telNumber from "./modules/numtel";
 import menu from "./modules/menu";
 import price from "./modules/price";
@@ -21,7 +22,7 @@ import problem from "./modules/problem";
 import consult from "./modules/consult";
 import sendData from "./modules/sendData";
 
-
+takedata();
 telNumber();
 menu();
 price();

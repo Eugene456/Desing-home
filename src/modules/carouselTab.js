@@ -1,7 +1,6 @@
 const sliderCarouselTab = (container, items, arrLeft, arrRight) =>{
 
 
-
     const repairTabContain = document.querySelector(container),
         repairItems = repairTabContain.querySelectorAll(items),
         arrowLeft = document.getElementById(arrLeft),
@@ -42,9 +41,9 @@ const sliderCarouselTab = (container, items, arrLeft, arrRight) =>{
         }
          
       })
-     
+      
       arrowLeft.addEventListener('click', () =>{
-
+        
             step--;
              position = stepWidth * step;
         if (step >= 0){
@@ -83,10 +82,12 @@ sliderCarouselTab ('#designs-list',
   'nav-arrow-popup-designs_right'
 
   )
+
+  setTimeout(() => {
   sliderCarouselTab('.nav-list-popup-repair',
   '.popup-repair-types-nav__item',
   'nav-arrow-popup-repair_left',
   'nav-arrow-popup-repair_right'
 
-  )
+  )},3000)
   export default sliderCarouselTab;

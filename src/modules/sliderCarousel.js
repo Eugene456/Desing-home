@@ -1,4 +1,5 @@
 
+
 class SliderCarousel {
     constructor(main, wrap, next, prev, slideToShow = 3){
         this.main = document.querySelector(main),
@@ -191,3 +192,5 @@ const partners = new SliderCarousel(
      
 )
 partners.init();
+
+
