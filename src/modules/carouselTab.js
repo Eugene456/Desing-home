@@ -3,7 +3,7 @@ const sliderCarouselTab = (container, items, arrLeft, arrRight) =>{
 
 
     const repairTabContain = document.querySelector(container),
-        repairItems = document.querySelectorAll(items),
+        repairItems = repairTabContain.querySelectorAll(items),
         arrowLeft = document.getElementById(arrLeft),
         arrowRight = document.getElementById(arrRight); 
 
@@ -58,7 +58,7 @@ const sliderCarouselTab = (container, items, arrLeft, arrRight) =>{
           
           repairTabContain.style.transform = `translateX(-${position}%)`;
         }
-      })
+      });
       
   }
 
@@ -77,4 +77,10 @@ sliderCarouselTab ('#designs-list',
   'nav-arrow-designs_left', 
   'nav-arrow-designs_right');
 
+  sliderCarouselTab('#nav-list-popup-designs',
+  '.designs-nav__item',
+  'nav-arrow-popup-designs_left',
+  'nav-arrow-popup-designs_right'
+
+  )
   export default sliderCarouselTab;

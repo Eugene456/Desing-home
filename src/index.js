@@ -18,7 +18,7 @@ import disengAdd from "./modules/desing";
 import desingAdd from "./modules/desing";
 import modPortfolio from "./modules/modPortfolio";
 import problem from "./modules/problem";
-import designPopup from "./modules/designPopup";
+import consult from "./modules/consult";
 
 
 telNumber();
@@ -34,4 +34,4 @@ documents();
 desingAdd();
 modPortfolio();
 problem();
-designPopup();
+consult();
