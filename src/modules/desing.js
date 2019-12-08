@@ -8,7 +8,7 @@ const desingAdd = () => {
     modTxt = slideWrap.querySelectorAll('.popup-design-text'),
     navList= document.querySelector('.nav-list-designs'),
     btnItem = navList.querySelectorAll('.designs-nav__item'),
-    previews = document.querySelectorAll('.preview-block');
+    previews = document.querySelectorAll('.preview-block')
 
     link.addEventListener('click', () =>{
         modWin.style.visibility = 'initial';
@@ -23,7 +23,6 @@ const desingAdd = () => {
 
     navList.addEventListener('click', event =>{
         let target = event.target;
-        
         btnItem.forEach((item, i) =>{
             if(item === target){
                previews.forEach((prevSl, k)=>{

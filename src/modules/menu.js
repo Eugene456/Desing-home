@@ -5,7 +5,10 @@ const menu = () =>{
     menuNav = menuDialog.querySelector('.popup-menu-nav'),
     menuItems = menuDialog.querySelectorAll('.popup-menu-nav__item'),
     btnFooter = document.querySelector('.button-footer');
+    
     let intervalScroll;
+    
+   
 
     btnMenu.addEventListener('click', () => {
                 menuDialog.style.transform = 'translate3d(0,0,0)';

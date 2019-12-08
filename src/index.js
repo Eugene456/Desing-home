@@ -19,6 +19,7 @@ import desingAdd from "./modules/desing";
 import modPortfolio from "./modules/modPortfolio";
 import problem from "./modules/problem";
 import consult from "./modules/consult";
+import sendData from "./modules/sendData";
 
 
 telNumber();
@@ -35,3 +36,4 @@ desingAdd();
 modPortfolio();
 problem();
 consult();
+sendData();

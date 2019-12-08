@@ -12,7 +12,7 @@ popupRight = document.getElementById('transparency_right'),
 popupLeft = document.getElementById('transparency_left'),
 curr = modTransp.querySelector('.slider-counter-content__current'),
 total = modTransp.querySelector('.slider-counter-content__total'),
-close = modTransp.querySelector('.close');
+close = modTransp.querySelectorAll('.close');
 
 	let step = 0;
 	curr.textContent = step + 1;
@@ -45,7 +45,7 @@ const moveRight = (arrL, arrR, item, current) =>{
 }
 
 const moveLeft = (arrL, arrR, item, current) =>{
-	console.log(step);
+
 	arrR.style.display = 'flex';
 		item[step].style.display = 'none';
 		step--;
@@ -87,9 +87,17 @@ popupRight.addEventListener('click', () =>{
 popupLeft.addEventListener('click', () =>{
 	moveLeft(popupLeft, popupRight, popupSlides, curr);
 });
-close.addEventListener('click', () => {
-	modTransp.removeAttribute('style');
-})
+
+modTransp.addEventListener('click', event =>{
+	let target = event.target;
+	close.forEach(item =>{
+		if(item === target){
+			modTransp.removeAttribute('style');
+		}
+	})
+});
+
+
 };
 
 

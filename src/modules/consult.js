@@ -45,11 +45,19 @@ const consult = () =>{
 
                         }
                     });
-                })
+                });
         }
 
         checkedForm(feedbackBlFm, '.feedback-block__form');
         checkedForm(feedbackForm, '.feedback__form');
+
+
+
+
+
+
+
+
 }
 
 

@@ -33,7 +33,7 @@ const formulaBlock = () => {
         });
     });
     
-    formulaSliderWrap.addEventListener('mouseover', event => {
+    formulaSliderWrap.addEventListener('click', event => {
         let target = event.target;
         target = target.closest('.formula-slider__slide');
           formulaItem.forEach((item, i) =>{

@@ -2,7 +2,7 @@ const modalPrivacy = () =>{
     const body = document.querySelector('body'),
     links = document.querySelectorAll('.link-privacy'),
     modPriv = document.querySelector('.popup-privacy'),
-    close = modPriv.querySelector('.close');
+    close = modPriv.querySelectorAll('.close');
 
     body.addEventListener('click', event => {
         let target = event.target;
@@ -14,9 +14,16 @@ const modalPrivacy = () =>{
         });
     });
 
-    close.addEventListener('click', () => {
-        modPriv.removeAttribute('style');
+    modPriv.addEventListener('click', event =>{
+        let target = event.target;
+        close.forEach(item =>{
+            if(item === target){
+                modPriv.removeAttribute('style');
+            }
+        });
     });
+    
+   
 
 }
 

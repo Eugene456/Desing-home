@@ -83,4 +83,10 @@ sliderCarouselTab ('#designs-list',
   'nav-arrow-popup-designs_right'
 
   )
+  sliderCarouselTab('.nav-list-popup-repair',
+  '.popup-repair-types-nav__item',
+  'nav-arrow-popup-repair_left',
+  'nav-arrow-popup-repair_right'
+
+  )
   export default sliderCarouselTab;
