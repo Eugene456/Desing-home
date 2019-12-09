@@ -1,12 +1,12 @@
 'use strict';
 
 import "@babel/polyfill";
-import "element-closest";
+import elementClosest from "element-closest";
 import "nodelist-foreach-polyfill";
 import "fetch-polyfill";
 import "formdata-polyfill";
 import "es6-promise";
-
+elementClosest(window);
 
 import takedata from "./modules/takedata";
 import telNumber from "./modules/numtel";
