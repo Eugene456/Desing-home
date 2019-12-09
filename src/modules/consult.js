@@ -12,16 +12,27 @@ const consult = () =>{
                 if(item === target){
                     modConsult.style.visibility = 'initial';
                 }
-            })
+            });
+
+        });
+
+        modConsult.addEventListener('click', event =>{
+            let target = event.target;
+            target = target.closest('.feedback-wrap');
+            if(!target){
+                modConsult.removeAttribute('style');
+            }
         });
 
         close.addEventListener('click', () => {
             modConsult.removeAttribute('style');
         });
         
+        
+
         const feedbackBlFm = body.querySelectorAll('.feedback-block__form'),
                 feedbackForm = body.querySelectorAll('.feedback__form');
-
+        let message = 0;
         const checkedForm = (form, tag)=>{
                 body.addEventListener('click', event =>{
                     let target = event.target;
@@ -32,13 +43,30 @@ const consult = () =>{
                             checkbox = item.querySelector('.checkbox__input');
                            
                                                 
-                            const inputs = item.querySelectorAll('input');
+                            const inputs = item.querySelectorAll('input'),
+                            attention = item.querySelector('.attention');
                             
+                            
+                            if (!checkbox.checked){
+                                if(!attention){
+                                    let div = document.createElement('div');
+                                    div.classList.add('attention');
+                                    div.textContent = 'Поставьте галочку о принятии соглашения конфиденциальности и заполните поле.';
+                                    div.style.width = '55%';
+                                    div.style.color = 'red';
+                                    item.appendChild(div);
+                                    
+                                }
+                            }
+
                             inputs.forEach(inp =>{
                                 if (inp.name === 'phone'){
                                 btn.setAttribute('disabled', 'disabled');
                                 if (inp.value !== '' && checkbox.checked ){
                                     btn.removeAttribute('disabled');
+                                    
+                                    attention.remove();
+                                    
                                 }
                                 }
                             });

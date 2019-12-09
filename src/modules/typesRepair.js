@@ -55,7 +55,7 @@ const typesRepair = () => {
                         itemsSlider[k].style.display = 'block';
                         activeSlider = itemsSlider[k];
                     sliderTotal.textContent = activeSlider.children.length;
-                    return activeBlock =[activeSlider, k];
+                    return activeBlock = [activeSlider, k];
                     }
                 }
             }
@@ -78,9 +78,11 @@ if(mark === 2){
 };
 
 if( mark === 2){
+    console.log(activeBlock[1]);
     previewsBlock[activeBlock[1]].addEventListener('click', event =>{
         
         let target = event.target;
+        console.log(activeBlock[1]);
         target = target.closest('.preview-block__item');
         let prevSlides = previewsBlock[activeBlock[1]].children;
        

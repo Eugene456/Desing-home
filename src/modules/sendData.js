@@ -29,9 +29,10 @@ const sendData = ()=>{
                 inputs.forEach(item => {
                     if (item.type === 'text'){
                         item.value = '';
+
                     };
                     if(item.type === 'checkbox'){
-                        item.removeAttribute('checked');
+                        item.checked = 0;
                     }
                 });
             })
@@ -79,7 +80,15 @@ feedbackForm.forEach(item => {
 
     close.addEventListener('click', () => {
         thanks.removeAttribute('style');
-    })
+    });
+
+    thanks.addEventListener('click', event =>{
+        let target = event.target;
+        target = target.closest('.feedback-wrap');
+        if(!target){
+            thanks.removeAttribute('style');
+        }
+    });
 }
 
 export default sendData;
