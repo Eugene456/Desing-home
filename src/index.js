@@ -1,5 +1,13 @@
 'use strict';
 
+import "@babel/polyfill";
+import "element-closest";
+import "nodelist-foreach-polyfill";
+import "fetch-polyfill";
+import "formdata-polyfill";
+import "es6-promise";
+
+
 import takedata from "./modules/takedata";
 import telNumber from "./modules/numtel";
 import menu from "./modules/menu";
