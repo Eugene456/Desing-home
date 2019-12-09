@@ -37,16 +37,20 @@ const formulaBlock = () => {
         let target = event.target;
         target = target.closest('.formula-slider__slide');
           formulaItem.forEach((item, i) =>{
+              item.classList.remove('active-item');
             let textItem = item.querySelector('p');
             formulaPopup[i].removeAttribute('style'); 
             textItem.removeAttribute('style'); 
             
                   
             if(item === target){
-
+                item.classList.add('active-item');
                formulaPopup[i].style.visibility = 'initial';
                formulaPopup[i].style.opacity = 1;
-               formulaPopup[i].style.top = '-215px';
+              
+                formulaPopup[i].style.top = '-215px';
+                formulaPopup[i].style.bottom = '150px';
+               
                textItem.style.transform  = "rotate(180deg)";
                formulaPopup[i].style.transform  = "rotate(180deg)";
                
