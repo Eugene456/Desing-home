@@ -60,12 +60,14 @@ const consult = () =>{
                             }
 
                             inputs.forEach(inp =>{
-                                if (inp.name === 'phone'){
+                                if (inp.name === 'phone' || inp.name === 'name'){
                                 btn.setAttribute('disabled', 'disabled');
                                 if (inp.value !== '' && checkbox.checked ){
                                     btn.removeAttribute('disabled');
+                                    if (attention){
+                                        attention.remove();
+                                    }
                                     
-                                    attention.remove();
                                     
                                 }
                                 }
