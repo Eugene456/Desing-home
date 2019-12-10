@@ -3,6 +3,7 @@ const typesRepair = () => {
     const navList = document.querySelector(list),
     btnsRepair = navList.querySelectorAll(buttons),
     itemsSlider = document.querySelector(slider).children,
+    design = document.getElementById('designs'),
     //for slider
     
     arrowLeft = document.getElementById(arrL),
@@ -78,24 +79,27 @@ if(mark === 2){
 };
 
 if( mark === 2){
-    console.log(activeBlock[1]);
-    previewsBlock[activeBlock[1]].addEventListener('click', event =>{
-        
-        let target = event.target;
-        console.log(activeBlock[1]);
-        target = target.closest('.preview-block__item');
-        let prevSlides = previewsBlock[activeBlock[1]].children;
-       
-        for(let k = 0; k < prevSlides.length; k++){
-            activeBlock[0].children[k].style.display = 'none';
-            if(prevSlides[k] === target){
+   
+    design.addEventListener('click', () => {
+           console.log(activeBlock[0])
+            previewsBlock[activeBlock[1]].addEventListener('click', event =>{
                 
-                activeBlock[0].children[k].style.display = 'flex';
-            }
-        }
-       
+                let target = event.target;
+                
+                target = target.closest('.preview-block__item');
+                let prevSlides = previewsBlock[activeBlock[1]].children;
+            
+                for(let k = 0; k < prevSlides.length; k++){
+                    activeBlock[0].children[k].style.display = 'none';
+                    if(prevSlides[k] === target){
+                        
+                        activeBlock[0].children[k].style.display = 'flex';
+                    }
+                }
+            
+            });
+        
     });
-
     link.addEventListener('click', () =>{
             
         for (let i = 0; i < popupSliders.length; i++){
