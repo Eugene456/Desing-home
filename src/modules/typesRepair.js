@@ -64,13 +64,14 @@ const typesRepair = () => {
         
     });
 
-const activePrevSlide = ()=>{
+const activePrevSlide = (active)=>{
 if(mark === 2){
+   
     const prevSlides = previewsBlock[activeBlock[1]].children;
     for(let j = 0; j < prevSlides.length; j++){
         let child = prevSlides[j].querySelector('div');
         child.classList.remove('preview_active');
-        if(j === step){
+        if(j === active ){
             child.classList.add('preview_active');
         }
     
@@ -81,7 +82,7 @@ if(mark === 2){
 if( mark === 2){
    
     design.addEventListener('click', () => {
-           console.log(activeBlock[0])
+           
             previewsBlock[activeBlock[1]].addEventListener('click', event =>{
                 
                 let target = event.target;
@@ -94,6 +95,20 @@ if( mark === 2){
                     if(prevSlides[k] === target){
                         
                         activeBlock[0].children[k].style.display = 'flex';
+                        activePrevSlide(k);
+                        
+                        if(k === activeBlock[0].children.length - 1){
+                            arrowRight.style.display = 'none';
+                            arrowLeft.style.display = 'flex';
+
+                        } else if (step === 0){
+                            arrowLeft.style.display = 'none';
+                            arrowRight.style.display = 'flex';
+                        }else{
+                            arrowLeft.style.display = 'flex';
+                            arrowRight.style.display = 'flex';
+                        }
+                        return step = k;
                     }
                 }
             
@@ -127,7 +142,7 @@ arrowRight.addEventListener('click', () => {
     }
         step++;
         sliderCurrent.textContent = step + 1;
-        activePrevSlide();
+        activePrevSlide(step);
         
     });
     
@@ -141,7 +156,7 @@ arrowRight.addEventListener('click', () => {
         step--;
         activeBlock[0].children[step].style.display = 'flex';
         sliderCurrent.textContent = step + 1;
-        activePrevSlide();
+        activePrevSlide(step);
     });
 
     
